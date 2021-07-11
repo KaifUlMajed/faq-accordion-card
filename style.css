@@ -1,0 +1,147 @@
+html, body {
+    font-size: 14px;
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
+    height: 100%;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    width: 845px;
+    height: 365px;
+}
+
+.header {
+    color:hsl(237, 12%, 33%);
+    font-weight: 700;
+    padding-top: 25px;
+}
+
+.accordion {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.text-container {
+    width: 50%;
+}
+
+.faq-container {
+    padding-right: 50px;
+    margin-top: 25px;
+}
+
+.question {
+    color: hsl(240, 6%, 50%);
+    font-weight: 400;
+}
+
+.arrow {
+    float: right;
+}
+
+.active, .question:hover {
+    color:hsl(237, 12%, 33%);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.active img {
+    transform: scaleY(-1);
+}
+
+.answer {
+    color: hsl(240, 6%, 50%);
+    display: none;
+}
+
+.answer.show {
+    display: inline;
+}
+
+.illustration-box {
+    position: absolute;
+    margin-top: 145px;
+    margin-left: -60px;
+    height: 120px;
+    width: 125px;
+    z-index: 1;
+}
+
+.illustration-woman {
+    margin-top: 36px;
+    margin-left: -27px;
+    width: 350px;
+}
+
+.image-container {
+    width: 50%;
+    background-size: 425px 450px;
+    background-repeat: no-repeat;
+    background-position: -83px -60px;
+    background-image: url('./images/bg-pattern-desktop.svg');
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    margin-top: -11px;
+ }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 960px) {
+    .card {
+        flex-direction: column;
+        width: min-content;
+        min-width: 369px;
+        height: 485px;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 120px;
+        background-size: 275px;
+        background-repeat: no-repeat;
+        background-position: 40px -154px;
+    }
+
+    .illustration-box {
+        margin-top: -54px;
+        margin-left: 10px;
+    }
+
+    .illustration-woman {
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 40px;
+        width: 275px;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    .faq-container {
+        padding: 0 15px 0;
+    }
+}
